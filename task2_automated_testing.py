@@ -1,4 +1,4 @@
-# --- task2_automated_testing.py ---
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service as ChromeService
@@ -53,7 +53,7 @@ class AutomatedLoginTest:
         
         # 3. Click the login button
         login_button.click()
-        time.sleep(1) # Small pause to let the page load
+        time.sleep(3) # Small pause to let the page load
 
         # 4. Verification: Check for the success message (on Herokuapp, it checks for a 'secure' area element)
         try:
@@ -111,7 +111,7 @@ def main():
     }
 
     # --- ADDED PAUSE HERE ---
-    print("\n--- TEST EXECUTION COMPLETE. PAUSING BROWSER FOR 5 SECONDS ---")
+    print("\n--- TEST EXECUTION COMPLETE. PAUSING BROWSER FOR 30 SECONDS ---")
     time.sleep(30)  # Pause for 30 seconds to view the final result before closing
     # -------------------------
 
@@ -133,4 +133,5 @@ def main():
     tester.teardown()
 
 if __name__ == "__main__":
+
     main()
