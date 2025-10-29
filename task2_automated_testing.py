@@ -1,4 +1,3 @@
-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service as ChromeService
@@ -83,7 +82,7 @@ class AutomatedLoginTest:
 
         # 4. Verification: Check for the failure/error message using the 'flash' ID
         try:
-            # CORRECTED: Locating the message container by its ID 'flash'
+           
             error_message_container = self.driver.find_element(By.ID, "flash")
             
             # Check if the expected error text is present in the container
@@ -134,4 +133,5 @@ def main():
     tester.teardown()
 
 if __name__ == "__main__":
+
     main()
